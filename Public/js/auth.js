@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/api/auth"
+const API = "https://con-sabor-app-vujn.vercel.app/api/auth"
 
 // ===== ELEMENTOS =====
 const loginForm = document.getElementById("loginForm")

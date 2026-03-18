@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/api/menu"
+const API = "https://con-sabor-app-vujn.vercel.app/api/menu"
 const token = localStorage.getItem("token")
 
 let currentId = null
