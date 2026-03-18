@@ -26,12 +26,12 @@ const __dirname = path.dirname(__filename)
 const publicPath = path.join(__dirname, "../public")
 
 // Servir archivos estáticos
-app.use(express.static(publicPath))
-
+app.use(express.static(path.join(__dirname, "../public")))
+console.log(publicPath)
 // Ruta principal
-app.get("/", (req, res) => {
-  res.sendFile(path.join(publicPath, "index.html"))
-})
+//app.get("/", (req, res) => {
+  //res.sendFile(path.join(publicPath, "index.html"))
+//})
 
 // API
 app.use("/api/auth", authRoutes)
@@ -40,6 +40,6 @@ app.use("/api/menu", menuRoutes)
 //const PORT = 3000
 
 //app.listen(PORT, () => {
- // console.log(`Servidor restaurante corriendo en http://localhost:${PORT}`)
-// })
+//console.log(`Servidor restaurante corriendo en http://localhost:${PORT}`)
+//})
 export default app
