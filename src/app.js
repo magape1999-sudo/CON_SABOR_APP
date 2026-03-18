@@ -23,10 +23,10 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Ruta a la carpeta public
-const publicPath = path.join(__dirname, "../public")
+const publicPath = path.join(__dirname, "../Public")
 
 // Servir archivos estáticos
-app.use(express.static(path.join(__dirname, "../public")))
+app.use(express.static(path.join(__dirname, "../Public")))
 console.log(publicPath)
 // Ruta principal
 app.get("/", (req, res) => {
