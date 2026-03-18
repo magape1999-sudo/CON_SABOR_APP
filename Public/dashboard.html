@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<h2>🍽 Admin</h2>
+
+<button onclick="loadMenu()">📋 Ver Menú</button>
+<button onclick="logout()">🚪 Cerrar sesión</button>
+
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<div class="header">
+<h1>Gestión de Menú</h1>
+</div>
+
+<!-- FORMULARIO -->
+<form id="menuForm" class="form-inline">
+
+<input type="text" id="name" placeholder="Nombre del plato" required>
+<input type="number" id="price" placeholder="Precio" required>
+<input type="text" id="description" placeholder="Descripción">
+
+<button class="btn">Agregar</button>
+
+</form>
+
+<!-- LISTADO -->
+<div class="menu-grid" id="menuList"></div>
+
+</div>
+
+</div>
+
+<!-- MODAL EDITAR -->
+<div class="modal" id="editModal">
+
+<div class="modal-content">
+
+<h3>Editar Plato</h3>
+
+<input id="editName" placeholder="Nombre"><br><br>
+<input id="editPrice" placeholder="Precio"><br><br>
+<input id="editDescription" placeholder="Descripción"><br><br>
+
+<button class="btn" onclick="updateItem()">Guardar</button>
+<button class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
+
+</div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
